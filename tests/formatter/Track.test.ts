@@ -14,7 +14,7 @@ test("formats basic valid track info", () => {
 \t\tTITLE "Come Closer"
 \t\tPERFORMER "Max Tase"
 \t\tFILE "/home/nxu/Music/Max Tase - Come Closer.mp3" WAVE
-\t\tINDEX 01 00:00:00\n`)
+\t\tINDEX 01 00:00:00\n`);
 });
 
 test("trims values to 80 characters", () => {
@@ -30,15 +30,15 @@ test("trims values to 80 characters", () => {
 \t\tTITLE "This is an extremely long test, that's definitely longer than the 80 character l"
 \t\tPERFORMER "This is an extremely long test, that's definitely longer than the 80 character l"
 \t\tFILE "/home/nxu/Music/Max Tase - Come Closer.mp3" WAVE
-\t\tINDEX 01 00:00:00\n`)
-})
+\t\tINDEX 01 00:00:00\n`);
+});
 
 test("removes quotation marks from strings", () => {
     const track = new Track(
         1,
-        "Come \"Closer\"",
-        "Max \"Tase\"",
-        "/home/nxu/Music/Max Tase - \"Come Closer\".mp3",
+        'Come "Closer"',
+        'Max "Tase"',
+        '/home/nxu/Music/Max Tase - "Come Closer".mp3',
         "00:00:00",
     );
 
@@ -46,5 +46,5 @@ test("removes quotation marks from strings", () => {
 \t\tTITLE "Come Closer"
 \t\tPERFORMER "Max Tase"
 \t\tFILE "/home/nxu/Music/Max Tase - Come Closer.mp3" WAVE
-\t\tINDEX 01 00:00:00\n`)
+\t\tINDEX 01 00:00:00\n`);
 });

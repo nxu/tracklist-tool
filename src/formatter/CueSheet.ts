@@ -10,8 +10,11 @@ export default class CueSheet {
     }
 
     toString() {
-        const tracks = this.tracks.reduce((tracklist: string, track: Track) => tracklist + track.toString(), "");
+        const tracks = this.tracks.reduce(
+            (tracklist: string, track: Track) => tracklist + track.toString(),
+            "",
+        );
 
-        return `FILE "${this.file.replaceAll('"', '')}" WAVE\n${tracks}`;
-    };
+        return `FILE "${this.file.replaceAll('"', "")}" WAVE\n${tracks}`;
+    }
 }

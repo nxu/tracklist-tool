@@ -6,8 +6,7 @@ export default class Track {
         public file: string,
         public start: string,
         public length: string | null = null,
-    ) {
-    }
+    ) {}
 
     toString(): string {
         const index: string = this.index.toString().padStart(2, "0");
