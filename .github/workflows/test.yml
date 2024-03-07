@@ -16,6 +16,7 @@ jobs:
                   node-version: 18
             - run: npm ci
             - run: npm test
-            - uses: actionsx/prettier@v2
+            - uses: creyD/prettier_action@v4.3
               with:
-                args: --check .
+                  prettier_options: --check
+                  dry: true
