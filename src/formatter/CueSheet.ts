@@ -1,6 +1,6 @@
-import Track from "./Track";
+import Track from "../parser/Track";
 
-class CueSheet {
+export default class CueSheet {
     file: string;
     tracks: Track[];
 
@@ -15,5 +15,3 @@ class CueSheet {
         return `FILE "${this.file.replaceAll('"', '')}" WAVE\n${tracks}`;
     };
 }
-
-export default CueSheet;

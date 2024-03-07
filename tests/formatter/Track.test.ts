@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import Track from "../src/formatter/Track";
+import Track from "../../src/parser/Track";
 
 test("formats basic valid track info", () => {
     const track = new Track(

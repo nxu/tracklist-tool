@@ -1,22 +1,12 @@
-class Track {
-    index: number;
-    title: string;
-    performer: string;
-    file: string;
-    start: string;
-
+export default class Track {
     constructor(
-        index: number,
-        title: string,
-        performer: string,
-        file: string,
-        start: string,
+        public index: number,
+        public title: string,
+        public performer: string,
+        public file: string,
+        public start: string,
+        public length: string | null = null,
     ) {
-        this.index = index;
-        this.title = title;
-        this.performer = performer;
-        this.file = file;
-        this.start = start;
     }
 
     toString(): string {
@@ -38,5 +28,3 @@ class Track {
         return string.replaceAll('"', "");
     }
 }
-
-export default Track;

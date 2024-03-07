@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import CueSheet from "../src/formatter/CueSheet";
-import Track from "../src/formatter/Track";
+import CueSheet from "../../src/formatter/CueSheet";
+import Track from "../../src/parser/Track";
 
 test("formats cue sheet", () => {
     const sheet = new CueSheet("/home/nxu/Music/recording.mp3", [
